@@ -67,4 +67,27 @@ describe ('Thermostat',function(){
     expect(thermostat.temperature).toBe(20);
   });
 
+  describe('Energy usage', function() {
+
+    it('tells me my usage is low if temp is below 18 degrees', function() {
+      for (var i=0; i <= 5; i++) {
+        thermostat.DownTemp();
+      }
+      expect(thermostat.Usage()).toBe('low-usage');
+    });
+
+    it('tells me my usage is medium if temp is between 18 and 25 degrees', function(){
+      expect(thermostat.Usage()).toBe('medium-usage');
+    });
+
+    it('tells me my usage is high if the temp is 25 degrees or above', function() {
+      thermostat.PowerSavingOff();
+      for (var i=0; i <= 10; i++) {
+        thermostat.UpTemp();
+      }
+      expect(thermostat.Usage()).toBe('high-usage');
+    });
+
+  });
+
 });
