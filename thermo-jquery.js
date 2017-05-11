@@ -6,8 +6,7 @@ $(document).ready(function() {
       alert('You cannot go beyond 25 degrees (32 if in PSM).')
     }
     thermostat.UpTemp();
-    $(' #temperature' ).text(thermostat.temperature);
-      $('#energy-usage').text(thermostat.Usage());
+    UpdateDisplay();
   });
 
   $('#downtemp').click(function( clickEvent ) {
@@ -16,14 +15,11 @@ $(document).ready(function() {
     }
     thermostat.DownTemp();
     UpdateDisplay();
-    // $('#temperature').text(thermostat.temperature);
-    // $('#energy-usage').text(thermostat.Usage());
   });
 
   $('#reset').click(function( clickEvent ) {
     thermostat.temperature = thermostat.DEFAULT_TEMP;
-    $('#temperature').text(thermostat.temperature);
-    $('#energy-usage').text(thermostat.Usage());    
+      UpdateDisplay();
   });
 
   $('#powersavingon').click(function( clickEvent ) {
@@ -36,13 +32,12 @@ $(document).ready(function() {
     $('#power-saving-status').text(thermostat.PowerSaving);
   });
 
-  UpdateDisplay = new function(
+  function UpdateDisplay(){
     $('#temperature').text(thermostat.temperature);
-    $('#energy-usage').text(thermostat.Usage();)
-    {};
-
-
-
+    $('#energy-usage').text(thermostat.Usage());
+    // $('class').addClass('usage')
+    $('#temperature').attr('class', thermostat.Usage());
+    };
 
   $('#energy-usage').text(thermostat.Usage());
 
