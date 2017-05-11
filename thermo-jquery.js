@@ -23,8 +23,20 @@ $(document).ready(function() {
     $('#temperature').text(thermostat.temperature);
   });
 
+  $('#powersavingon').click(function( clickEvent ) {
+    thermostat.PowerSavingOn();
+    $('#power-saving-status').text(thermostat.PowerSaving);
+  });
+
+  $('#powersavingoff').click(function( clickEvent ) {
+    thermostat.PowerSavingOff();
+    $('#power-saving-status').text(thermostat.PowerSaving);
+  });
+
   $( "section" ).addClass("test");
 
-  $(' #temperature' ).text(thermostat.temperature);
+  $('#temperature' ).text(thermostat.temperature);
+
+  $('#power-saving-status').text(thermostat.PowerSaving);
 
 });
