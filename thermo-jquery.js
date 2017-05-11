@@ -34,11 +34,11 @@ $(document).ready(function() {
 
   function UpdateDisplay(){
     $('#temperature').text(thermostat.temperature);
+    $('#energy-usage').attr('class', thermostat.Usage());
     $('#energy-usage').text(thermostat.Usage());
-    // $('class').addClass('usage')
-    $('#temperature').attr('class', thermostat.Usage());
     };
 
+  $('#energy-usage').attr('class', thermostat.Usage());
   $('#energy-usage').text(thermostat.Usage());
 
   $( "section" ).addClass("test");
