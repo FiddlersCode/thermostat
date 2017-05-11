@@ -2,6 +2,9 @@
 $(document).ready(function() {
 
   $('#uptemp').click(function( clickEvent ) {
+    if ( thermostat.temperature === thermostat.MaxTemp) {
+      alert('You cannot go beyond 25 degrees (32 if in PSM).')
+    }
     thermostat.UpTemp();
     $(' #temperature' ).text(thermostat.temperature);
   });
