@@ -16,7 +16,11 @@ $(document).ready(function() {
     thermostat.DownTemp();
     $('#temperature').text(thermostat.temperature);
 
+  });
 
+  $('#reset').click(function( clickEvent ) {
+    thermostat.temperature = thermostat.DEFAULT_TEMP;  
+    $('#temperature').text(thermostat.temperature);
   });
 
   $( "section" ).addClass("test");

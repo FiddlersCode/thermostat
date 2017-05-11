@@ -3,6 +3,7 @@ function Thermostat() {
   this.MinTemp = 10;
   this.PowerSaving = true;
   this.MaxTemp = 25;
+  this.DEFAULT_TEMP = 20;
 }
 
 
