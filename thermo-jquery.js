@@ -7,6 +7,7 @@ $(document).ready(function() {
     }
     thermostat.UpTemp();
     $(' #temperature' ).text(thermostat.temperature);
+      $('#energy-usage').text(thermostat.Usage());
   });
 
   $('#downtemp').click(function( clickEvent ) {
@@ -15,11 +16,11 @@ $(document).ready(function() {
     }
     thermostat.DownTemp();
     $('#temperature').text(thermostat.temperature);
-
+    $('#energy-usage').text(thermostat.Usage());
   });
 
   $('#reset').click(function( clickEvent ) {
-    thermostat.temperature = thermostat.DEFAULT_TEMP;  
+    thermostat.temperature = thermostat.DEFAULT_TEMP;
     $('#temperature').text(thermostat.temperature);
   });
 
@@ -32,6 +33,8 @@ $(document).ready(function() {
     thermostat.PowerSavingOff();
     $('#power-saving-status').text(thermostat.PowerSaving);
   });
+
+  $('#energy-usage').text(thermostat.Usage());
 
   $( "section" ).addClass("test");
 
