@@ -12,8 +12,17 @@
       var thermostat = new Thermostat();
     </script>
     <section>
-      <h1 id='header'>THERMOSTAT!!</h1>
-      <h2> Current outside temperature: <span id=current-temperature></span>&#176;</h2>
+      <h1 id='header'>Thermostat</h1>
+      <h3> Please choose a city to see the temperature:</h3>
+      <select id='current-city'>
+        <option value='cambridge'>Cambridge</option>
+        <option value='liverpool'>Liverpool</option>
+        <option value='london'>London</option>
+        <option value='ann-arbor'>Ann Arbor</option>
+        <option value='falmouth'>Falmouth</option>
+        </select>
+        <h3> Current outside temperature: <span id=current-temperature>20</span>&#176;C</h3>
+      </section>
       <p>
         <button id='uptemp'>Temperature up</button>
         <button id='downtemp'>Temperature down </button>
