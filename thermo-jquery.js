@@ -2,11 +2,10 @@ $(document).ready(function() {
 
   $
 
-  $(document).click(function( clickEvent ) {
-    
+  $('#temperature-up').click(function( clickEvent ) {
+
     alert( 'Temp Up Clicked' );
 
   });
 
 });
-
