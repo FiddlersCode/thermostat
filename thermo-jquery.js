@@ -1,6 +1,3 @@
-// window.onload = function(){
-//     alert("Welcome to our super slick thermostat site!")
-// };
 
 $(document).ready(function() {
 
@@ -18,6 +15,6 @@ $(document).ready(function() {
 
   $( "section" ).addClass("test");
 
-  // $( "section" ).removeClass("test");
+  $(' #temperature' ).text(thermostat.temperature);
 
 });

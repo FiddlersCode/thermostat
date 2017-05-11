@@ -3,10 +3,16 @@
   <head>
     <title>Thermostat</title>
     <link rel='stylesheet' href='style.css'>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="thermo-jquery.js"></script>
+    <script src="src/Thermostat.js"></script>
   </head>
   <body>
+    <script>
+      var thermostat = new Thermostat();
+    </script>
     <section>
-      <h1 id='temperature'></h1>
+      <h1 id='header'>THERMOSTAT!!</h1>
       <p>
         <button id='uptemp'>+</button>
         <button id='downtemp'>-</button>
@@ -14,12 +20,15 @@
         <br>
         Power saving mode is <span id="power-saving-status">on.</span>
         <br>
+        Current Temperature is: <span id="temperature"></span>               
+        <br>
         <button id='powersavingon'>PSM on</button>
         <button id='powersavingoff'>PSM off</button>
       </p>
     </section>
-    <script src="jquery-3.2.1.js"></script>
-    <script src="thermo-jquery.js"></script>
-    <script src="src/Thermostat.js"></script>
+
+
   </body>
   </html>
+
+
