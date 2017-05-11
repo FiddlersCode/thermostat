@@ -22,6 +22,7 @@ $(document).ready(function() {
   $('#reset').click(function( clickEvent ) {
     thermostat.temperature = thermostat.DEFAULT_TEMP;
     $('#temperature').text(thermostat.temperature);
+    $('#energy-usage').text(thermostat.Usage());    
   });
 
   $('#powersavingon').click(function( clickEvent ) {
