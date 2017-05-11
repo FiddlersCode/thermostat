@@ -2,8 +2,9 @@
 $(document).ready(function() {
 
   $('#uptemp').click(function( clickEvent ) {
-
-    alert( 'Temp Up Clicked' );
+    thermostat.UpTemp();
+    $(' #temperature' ).text(thermostat.temperature);
+    alert( thermostat.temperature );
 
   });
 
