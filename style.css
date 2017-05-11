@@ -9,6 +9,22 @@ span {
 
 }
 
+.high-usage {
+  color: red;
+
+}
+
+.medium-usage {
+  color: yellow;
+
+}
+
+.low-usage {
+  color: green;
+
+}
+
+
 /*<style>
 section.test {
   font-weight: bold;

@@ -15,8 +15,9 @@ $(document).ready(function() {
       alert('You cannot go below 10 degrees.')
     }
     thermostat.DownTemp();
-    $('#temperature').text(thermostat.temperature);
-    $('#energy-usage').text(thermostat.Usage());
+    UpdateDisplay();
+    // $('#temperature').text(thermostat.temperature);
+    // $('#energy-usage').text(thermostat.Usage());
   });
 
   $('#reset').click(function( clickEvent ) {
@@ -34,6 +35,14 @@ $(document).ready(function() {
     thermostat.PowerSavingOff();
     $('#power-saving-status').text(thermostat.PowerSaving);
   });
+
+  UpdateDisplay = new function(
+    $('#temperature').text(thermostat.temperature);
+    $('#energy-usage').text(thermostat.Usage();)
+    {};
+
+
+
 
   $('#energy-usage').text(thermostat.Usage());
 
